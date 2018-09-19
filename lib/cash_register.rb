@@ -5,13 +5,13 @@ attr_accessor :total, :discount
   def initialize(discount=0)
     @total = 0
     @discount = discount
-    @item =[]
+    @items =[]
   end
 
   def add_item(title, price, quantity=1 )
     @total += (price * quantity)
     quantity.times do
-      @item.push(title)
+      @items.push(title)
     end
     @total
   end
@@ -26,11 +26,11 @@ attr_accessor :total, :discount
   end
 
   def items
-    @item
+    @items
   end
 
   def void_last_transaction
-    total = 0
+    @total
   end
 
 end
