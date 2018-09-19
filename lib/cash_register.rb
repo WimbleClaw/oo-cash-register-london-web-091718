@@ -29,7 +29,7 @@ attr_accessor :total, :discount
   end
 
   def void_last_transaction
-    @total - self
+    @total - self.add_item(price)
   end
 
 end
