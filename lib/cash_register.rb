@@ -12,5 +12,7 @@ attr_accessor :total, :discount
   end
 
   def apply_discount
+    @total = CashRegister.inject {|sum, item| sum + item.price}
   end
+
 end
