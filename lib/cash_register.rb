@@ -6,7 +6,6 @@ attr_accessor :total, :discount
     @total = 0
     @discount = discount
     @item =[]
-    @last_item = 0
   end
 
   def add_item(title, price, quantity=1 )
@@ -31,7 +30,7 @@ attr_accessor :total, :discount
   end
 
   def void_last_transaction
-    cash_register.total = 0
+    total = 0
   end
 
 end
