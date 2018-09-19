@@ -14,10 +14,6 @@ attr_accessor :total, :discount
     quantity.times do
       @item.push(title)
     end
-    @last_item += (price * quantity)
-    quantity.times do
-      @item.push(title)
-    end
     @total
   end
 
@@ -35,7 +31,7 @@ attr_accessor :total, :discount
   end
 
   def void_last_transaction
-    @total - @last_item
+    @total - @total
   end
 
 end
