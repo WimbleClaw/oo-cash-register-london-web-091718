@@ -12,7 +12,7 @@ attr_accessor :total, :discount
   end
 
   def apply_discount
-    @total = CashRegister.inject {|sum, item| sum + item.price}
+    @total = @total - @total * @discount / 100.00
   end
 
 end
