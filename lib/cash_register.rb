@@ -14,7 +14,7 @@ attr_accessor :total, :discount
     # quantity.times do
     #   @items.push(title)
     # end
-    @items.push(title.times(quantity))
+    @items.push(quantity.times(title))
     @items = @items.flatten
     @last_transaction = (price * quantity)
     @total
