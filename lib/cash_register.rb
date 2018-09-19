@@ -13,6 +13,7 @@ attr_accessor :total, :discount
 
   def apply_discount
     @total = @total - @total * @discount / 100.00
+    "After the discount, the total comes to #{@total}."
   end
 
 end
