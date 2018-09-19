@@ -11,10 +11,10 @@ attr_accessor :total, :discount
 
   def add_item(title, price, quantity=1 )
     @total += (price * quantity)
-    # quantity.times do
-    #   @items.push(title)
-    # end
-    @items.push(quantity.times.collect {title})
+    quantity.times do
+      @items.push(title)
+    end
+    # @items.push(quantity.times.collect {title})
     @items = @items.flatten
     @last_transaction = (price * quantity)
     @total
