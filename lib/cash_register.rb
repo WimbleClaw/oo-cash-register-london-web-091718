@@ -26,9 +26,9 @@ attr_accessor :total, :discount
 
   def items
     @item
-
   end
 
+  def void
 
 
 
