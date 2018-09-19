@@ -13,6 +13,7 @@ attr_accessor :total, :discount
     quantity.times do
       @item.push(title)
     end
+    @total
   end
 
   def apply_discount
@@ -29,7 +30,7 @@ attr_accessor :total, :discount
   end
 
   def void_last_transaction
-    @total - self.add_item(price)
+    @total - self.add_item
   end
 
 end
