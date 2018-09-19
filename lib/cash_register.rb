@@ -6,14 +6,15 @@ attr_accessor :total, :discount
     @total = 0
     @discount = discount
     @item =[]
+    @last_item = 0
   end
 
   def add_item(title, price, quantity=1 )
-    @total += (price * quantity)
+    @last_item += (price * quantity)
     quantity.times do
       @item.push(title)
     end
-    @total
+    @total += @last_item
   end
 
   def apply_discount
@@ -29,8 +30,8 @@ attr_accessor :total, :discount
     @item
   end
 
-  def void_last_transaction(title, price)
-    @total - add_item(title, price)
+  def void_last_transaction
+    @total -
   end
 
 end
