@@ -11,7 +11,7 @@ attr_accessor :total, :discount
   def add_item(title, price, quantity=1 )
     @total += (price * quantity)
     quantity.times do
-      @items.push(title)
+      @item.push(title)
     end
   end
 
