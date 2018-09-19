@@ -29,7 +29,7 @@ attr_accessor :total, :discount
   end
 
   def void
-    @total - add_item
+    @total - @add_item
   end
 
 end
