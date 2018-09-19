@@ -15,6 +15,7 @@ attr_accessor :total, :discount
       @item.push(title)
     end
     @total += @last_item
+    @total
   end
 
   def apply_discount
