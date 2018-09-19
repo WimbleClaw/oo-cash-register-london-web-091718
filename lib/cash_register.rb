@@ -31,7 +31,7 @@ attr_accessor :total, :discount
   end
 
   def void_last_transaction
-    @total - @total
+    cash_register.total = 0
   end
 
 end
