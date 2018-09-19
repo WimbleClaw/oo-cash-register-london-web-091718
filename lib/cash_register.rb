@@ -13,7 +13,7 @@ attr_accessor :total, :discount
     # quantity.times do
     #   @items.push(title)
     # end
-    @item << quanity.times title
+    @item << title.times quanity
   end
 
   def apply_discount
